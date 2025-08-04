@@ -1,14 +1,21 @@
-let livro = {
-    titulo: "Dom Casmurro",
-    autor: "Machado de Assis",
-    ano: 1899
-};
+function calcularIdade(anoNascimento) {
+  const anoAtual = new Date().getFullYear();
 
-function exibirLivro(livro) {
-    console.log("Título: " + livro.titulo);
-    console.log("Autor: " + livro.autor);
-    console.log("Ano: " + livro.ano);
+  if (anoNascimento < 1900) {
+    console.log("Ano inválido! O ano não pode ser menor que 1900.");
+    return;
+  }
+
+  if (anoNascimento > anoAtual) {
+    console.log("Ano inválido! O ano não pode ser maior que o ano atual.");
+    return;
+  }
+
+  const idade = anoAtual - anoNascimento;
+  console.log(`Você tem ${idade} anos.`);
 }
 
-// Exibindo o livro
-exibirLivro(livro);
+const entrada = prompt("Digite seu ano de nascimento:");
+const ano = parseInt(entrada);
+
+calcularIdade(ano);
