@@ -1,11 +1,14 @@
-function validaSenha(senha) {
-    if (senha === "DaxCode10") {
-        return "Acesso autorizado";
-    } else {
-        return "Acesso negado";
-    }
+let livro = {
+    titulo: "Dom Casmurro",
+    autor: "Machado de Assis",
+    ano: 1899
+};
+
+function exibirLivro(livro) {
+    console.log("Título: " + livro.titulo);
+    console.log("Autor: " + livro.autor);
+    console.log("Ano: " + livro.ano);
 }
 
-// Exemplos de uso:
-console.log(validaSenha("DaxCode10"));  // Acesso autorizado
-console.log(validaSenha("senhaErrada")); // Acesso negado
+// Exibindo o livro
+exibirLivro(livro);
