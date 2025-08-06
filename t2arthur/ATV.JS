@@ -2,16 +2,19 @@
 function cumprimentar(text) {
   return "Olá, " + text + "!";
 }
+console.log(cumprimentar("Will")); // "Olá, Will!"
 
 // 2
 function idadeEmDias(anos) {
   return anos * 365;
 }
+console.log(idadeEmDias(25)); // 9125
 
 // 3
 function maiorIgual(a, b) {
   return a >= b;
 }
+console.log(maiorIgual(0, 0)); // true
 
 // 4
 function multiplicar(a, b) {
@@ -21,6 +24,7 @@ function multiplicar(a, b) {
   }
   return resultado;
 }
+console.log(multiplicar(3, 5)); // 15
 
 // 5
 function repetir(elem, vezes) {
@@ -30,11 +34,13 @@ function repetir(elem, vezes) {
   }
   return resultado;
 }
+console.log(repetir("code", 3)); // ["code", "code", "code"]
 
 // 6
 function firstLast(array) {
   return [array[0], array[array.length - 1]];
 }
+console.log(firstLast([1, 2, 3])); // [1, 3]
 
 // 7
 function removerPropriedade(obj, prop) {
@@ -42,6 +48,9 @@ function removerPropriedade(obj, prop) {
   delete copia[prop];
   return copia;
 }
+console.log(removerPropriedade({ a: 1, b: 2 }, "a")); // { b: 2 }
+console.log(removerPropriedade({ id: 20, nome: "caneta", descricao: "Não preenchido" }, "descricao")); 
+// { id: 20, nome: "caneta" }
 
 // 8
 function tudoPar(array) {
@@ -53,6 +62,7 @@ function tudoPar(array) {
   }
   return resultado;
 }
+console.log(tudoPar([10, 70, 22, 45])); // [10, 22]
 
 // 9
 function totalDespesas(produtos) {
@@ -62,6 +72,10 @@ function totalDespesas(produtos) {
   }
   return total;
 }
+console.log(totalDespesas([
+  { nome: "celular", categoria: "eletrônico", preco: 1000 },
+  { nome: "fone", categoria: "acessório", preco: 200 }
+])); // 1200
 
 // 10
 function fatorial(n) {
@@ -71,6 +85,7 @@ function fatorial(n) {
   }
   return resultado;
 }
+console.log(fatorial(5)); // 120
 
 // 11
 function vemMedia(alunos) {
@@ -87,3 +102,8 @@ function vemMedia(alunos) {
   }
   return melhorAluno;
 }
+console.log(vemMedia([
+  { nome: "Will", sobrenome: "Santos", idade: 28, notas: [10, 10, 10, 10] },
+  { nome: "Digo", sobrenome: "Santos", idade: 26, notas: [0, 5, 9, 7] }
+])); 
+// { nome: "Will", media: 10 }
