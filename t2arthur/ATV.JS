@@ -28,3 +28,18 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+// ===== Questão 4a =====
+document.getElementById("btnIdade").addEventListener("click", function() {
+  let valor = document.getElementById("idade").value;
+  document.getElementById("resultado").innerText = valor;
+});
+
+// ===== Questão 4b =====
+let caixas = document.querySelectorAll(".caixa");
+caixas.forEach(caixa => caixa.style.backgroundColor = "#f0f0f0");
+
+// ===== Questão 4c =====
+let itensQ4 = document.querySelectorAll("#listaQ4 li");
+itensQ4.forEach(item => item.innerText = "Novo " + item.innerText);
+
