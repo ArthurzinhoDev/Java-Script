@@ -43,3 +43,23 @@ caixas.forEach(caixa => caixa.style.backgroundColor = "#f0f0f0");
 let itensQ4 = document.querySelectorAll("#listaQ4 li");
 itensQ4.forEach(item => item.innerText = "Novo " + item.innerText);
 
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo onkeyup</title>
+</head>
+<body>
+  <h2>Digite seu nome:</h2>
+  <input type="text" id="nome" placeholder="Escreva aqui...">
+  <p id="saida"></p>
+
+  <script>
+    document.getElementById("nome").addEventListener("keyup", function() {
+      let valor = document.getElementById("nome").value;
+      document.getElementById("saida").innerText = "Você digitou: " + valor;
+    });
+  </script>
+</body>
+</html>
